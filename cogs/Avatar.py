@@ -22,6 +22,7 @@ class AvatarCommand(commands.Cog):
             color=discord.Color.blue()
         )
         embed.set_image(url=f"attachment://{dateiname}")
+        embed.set_footer(text=f"Angefordert von: {ctx.author.name}")
         await ctx.respond(embed=embed, file=bild_datei)
 
 def setup(bot):
